@@ -70,5 +70,21 @@ class StackTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(self::SECOND_ELEMENT, $secondElement);
         $this->assertEquals(self::FIRST_ELEMENT, $firstElement);
     }
+
+    /**
+     * @expectedException \DataStructure\Stack\InvalidStackException
+     */
+    public function testAnEmptyStackWhenLookingTopWillThrowAnInvalidStackException()
+    {
+        $this->stack->top();
+    }
+
+    /**
+     * @expectedException \DataStructure\Stack\InvalidStackException
+     */
+    public function testAnEmptyStackWhenPopingWillThrowAnInvalidStackException()
+    {
+        $this->stack->pop();
+    }
 }
  

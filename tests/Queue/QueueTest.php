@@ -1,7 +1,7 @@
 <?php
 use DataStructure\Queue\Queue;
 
-class QueueTest extends PHPUnit_Framework_TestCase {
+class QueueTest extends \PHPUnit_Framework_TestCase {
     const AN_ELEMENT = self::FIRST_ELEMENT;
     const FIRST_ELEMENT = 1;
     const SECOND_ELEMENT = 2;
@@ -52,7 +52,7 @@ class QueueTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException: \DataStructure\Queue\InvalidQueueException
+     * @expectedException \DataStructure\Queue\InvalidQueueException
      */
     public function testGivenAnEmptyStackWhenDequeingWillThrowInvalidQueueException()
     {

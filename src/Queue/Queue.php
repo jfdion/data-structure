@@ -15,6 +15,9 @@ class Queue
 
     public function deque()
     {
+        if ($this->isEmpty()) {
+            throw new InvalidQueueException("Queue is empty");
+        }
         return array_shift($this->elements);
     }
 
